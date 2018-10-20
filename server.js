@@ -1,14 +1,14 @@
 const express= require('express'),
-const path = require('path');
+ path = require('path');
 
 const app =express();
 
 
-app.use(express.static('./dist/unfound-angular'));
+app.use(express.static('unfound-angular'));
 
 app.get('/*', (req,res)=>{
     
-res.sendFile(path.join(__dirname,'/dist/unfound-angular/index.html'));
+res.sendFile(path.join(__dirname,'unfound-angular/index.html'));
 
 });
 
